@@ -22,7 +22,6 @@ from django.http import HttpResponse
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-     path('', lambda request: HttpResponse("Home page")),  # test page
-    
+    path('', include('home.urls')),
 
 ]
